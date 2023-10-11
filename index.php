@@ -10,30 +10,7 @@ Verificato il corretto funzionamento del nostro codice, spostiamo la logica in u
 
 //var_dump($_GET['password_length']);
 
-$password_length = $_GET['password_length'];
-
-if (isset($password_length) && $password_length !== '') {
-
-    $password = password_generate($password_length);
-};
-
-function password_generate($password_length)
-{
-    if ($password_length > 0 && $password_length < 40) {
-
-        $characters = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789.-_?!/+<>^][£$%&=";
-
-        for ($i = 0; $i < $password_length; $i++) {
-
-            $char = rand(0, strlen($characters) - 1);
-
-            $new_password[$i] = $characters[$char];
-        }
-    }
-
-    return (implode('', $new_password));
-}
-
+include __DIR__ . '/partials/functions.php'
 
 
 ?>
