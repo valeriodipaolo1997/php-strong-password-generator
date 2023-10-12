@@ -10,7 +10,9 @@ Verificato il corretto funzionamento del nostro codice, spostiamo la logica in u
 
 //var_dump($_GET['password_length']);
 
-include __DIR__ . '/partials/functions.php'
+$password_length = $_GET['password_length'];
+
+include __DIR__ . './partials/function.php'
 
 
 ?>

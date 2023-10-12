@@ -1,10 +1,10 @@
 <?php
 if (isset($password_length) && $password_length !== '') {
 
-    $password = password_generate($password_length);
+    $password = generate_password($password_length);
 };
 
-function password_generate($password_length)
+function generate_password($password_length)
 {
     if ($password_length > 0 && $password_length < 30) {
 
